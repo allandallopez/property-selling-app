@@ -22,7 +22,7 @@ const HomePage = () => {
             </View>
 
             <View style={{ alignSelf: 'center', justifyContentL: 'center', alignItems: 'center' }}>
-               <Text style={styles.userTitle}>Henry Scott</Text>
+               <Text style={styles.userTitle}>Allan Jonna</Text>
                <Text style={{ ...styles.userTitle, fontWeight: 'normal' }}>Member Broker Century 21 BSD</Text>
             </View>
          </View>
