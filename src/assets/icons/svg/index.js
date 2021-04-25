@@ -1,2 +1,7 @@
 export { default as ArrowLeftIcon } from './ArrowLeftIcon'
 export { default as ProfileDummyIcon } from './ProfileDummyIcon'
+export { default as BathtubIcon } from './BathtubIcon'
+export { default as MatressIcon } from './MatressIcon'
+export { default as FieldIcon } from './FieldIcon'
+export { default as PinLocIcon } from './PinLocIcon'
+export { default as MoreIcon } from './MoreIcon'

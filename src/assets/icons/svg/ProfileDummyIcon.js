@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Svg, { Circle, Defs, Pattern, Use, Image } from 'react-native-svg'
+import PropTypes from 'prop-types'
 
-function ProfileDummyIcon(props) {
+function ProfileDummyIcon({ width, height, ...props }) {
    return (
       <Svg
-         width={64}
-         height={64}
+         width={width}
+         height={height}
          viewBox="0 0 64 64"
          fill="none"
          xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +26,16 @@ function ProfileDummyIcon(props) {
          </Defs>
       </Svg>
    )
+}
+
+ProfileDummyIcon.propTypes = {
+   width: PropTypes.number,
+   height: PropTypes.number,
+}
+
+ProfileDummyIcon.defaultProps = {
+   width: 64,
+   height: 64,
 }
 
 export default ProfileDummyIcon

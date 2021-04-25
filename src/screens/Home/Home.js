@@ -1,9 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
 import { ArrowLeftIcon, ProfileDummyIcon } from '@svgIcons'
-
 import { font } from '@utils'
+
+import Listing from './Listing'
+import Favorite from './Favorite'
+import Arsip from './Arsip'
+
+const Tab = createMaterialTopTabNavigator()
 
 const HomePage = () => {
    return (
@@ -20,6 +26,31 @@ const HomePage = () => {
                <Text style={{ ...styles.userTitle, fontWeight: 'normal' }}>Member Broker Century 21 BSD</Text>
             </View>
          </View>
+         <Tab.Navigator
+            swipeEnabled={false}
+            initialRouteName={'Listing'}
+            tabBarOptions={{
+               activeTintColor: '#BEAF87',
+               inactiveTintColor: '#000000',
+               labelStyle: {
+                  textTransform: 'none',
+                  fontSize: 13,
+                  fontFamily: font.AvenirRegular,
+                  fontWeight: '700',
+                  flex: 1,
+                  flexDirection: 'row',
+               },
+               scrollEnabled: false,
+               indicatorStyle: {
+                  borderBottomWidth: 4,
+                  borderBottomColor: '#BEAF87',
+               },
+               style: { backgroundColor: '#F9F9F9' },
+            }}>
+            <Tab.Screen name="Listing" component={Listing} />
+            <Tab.Screen name="Favorite" component={Favorite} />
+            <Tab.Screen name="Arsip" component={Arsip} />
+         </Tab.Navigator>
       </View>
    )
 }
@@ -33,7 +64,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: 16,
       paddingVertical: 17,
       width: '100%',
-      height: 192,
+      height: null,
       backgroundColor: '#F9F9F9',
    },
    profile: {
